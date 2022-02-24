@@ -9,15 +9,10 @@ print("Hello! Welcome to RoShamBo! Let's play! \n")
 while True:
     PlayerChoice = input("rock, paper, or scissors? ")
 
-    ProgramChoice = ""
-    randomRoll = (random.randrange(1, 4))
-    if randomRoll == 1:
-        ProgramChoice = "rock"
-    if randomRoll == 2:
-        ProgramChoice = "paper"
-    if randomRoll == 3:
-        ProgramChoice = "scissors"
+    possibleOptions = ["rock","paper","scissors"]
     
+    ProgramChoice = (random.choice(possibleOptions))
+       
     print("I choose...",ProgramChoice,)
     if ProgramChoice == PlayerChoice:
         print("Stalemate! \n")
